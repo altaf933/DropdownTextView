@@ -23,3 +23,12 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+ext {
+    runnerVersion = '1.0.1'
+    rulesVersion = '1.0.1'
+    espressoVersion = '3.0.1'
+    powermockVersion = '1.6.6'
+    robolectricVersion = '3.6.1'
+    asserJunit = '3.9.0'
+}

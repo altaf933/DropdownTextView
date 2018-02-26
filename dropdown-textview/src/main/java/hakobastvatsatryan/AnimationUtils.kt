@@ -19,8 +19,7 @@ inline fun <reified V> changeValue(from: V,
 								   to: V,
 								   duration: Long,
 								   crossinline update: (value: V) -> Unit,
-								   crossinline complete: (() -> Unit)
-) {
+								   crossinline complete: (() -> Unit)) {
 	val vH: PropertyValuesHolder = when (from) {
 		is Int -> PropertyValuesHolder.ofInt("prop", from as Int, to as Int)
 		is Float -> PropertyValuesHolder.ofFloat("prop", from as Float, to as Float)
@@ -44,8 +43,7 @@ inline fun <reified V> changeValue(from: V,
 inline fun <reified V> changeValue(from: V,
 								   to: V,
 								   duration: Long,
-								   crossinline update: (value: V) -> Unit
-) {
+								   crossinline update: (value: V) -> Unit) {
 	val vH: PropertyValuesHolder = when (from) {
 		is Int -> PropertyValuesHolder.ofInt("prop", from as Int, to as Int)
 		is Float -> PropertyValuesHolder.ofFloat("prop", from as Float, to as Float)
